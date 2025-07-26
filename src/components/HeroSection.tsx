@@ -34,12 +34,26 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up">
-            <Button className="btn-hero group">
+            <Button 
+              className="btn-hero group"
+              onClick={() => {
+                const pricingSection = document.getElementById('pricing');
+                pricingSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               COMIENZA TU TRANSFORMACIÓN
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() => {
+                const gallerySection = document.getElementById('gallery');
+                gallerySection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               VER INSTALACIONES
             </Button>
           </div>

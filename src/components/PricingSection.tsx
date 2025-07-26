@@ -53,7 +53,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="pricing" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
@@ -109,6 +109,9 @@ const PricingSection = () => {
                       : 'bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground'
                   }`}
                   size="lg"
+                  onClick={() => {
+                    alert(`¡Seleccionaste el plan ${plan.name}! Contacta con nosotros para más información.`);
+                  }}
                 >
                   COMENZAR AHORA
                 </Button>
@@ -121,7 +124,14 @@ const PricingSection = () => {
           <p className="text-muted-foreground mb-4">
             ¿Necesitas algo más específico?
           </p>
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => {
+              alert('Contacta con nosotros para planes corporativos. ¡Ofertas especiales para empresas!');
+            }}
+          >
             PLANES CORPORATIVOS
           </Button>
         </div>
